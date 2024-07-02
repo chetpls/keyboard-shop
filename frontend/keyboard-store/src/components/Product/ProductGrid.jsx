@@ -7,8 +7,11 @@ function ProductGrid({ selectedType, limit }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(productsData);
-  }, []);
+    fetch('http://localhost:5000/api/products')
+        .then(response => response.json())
+        .then(data => setProducts(data))
+        .catch(error => console.error('Error fetching data:', error));
+}, []);
 
   const filteredProducts = selectedType
     ? products.filter((product) => product.type === selectedType)
@@ -22,8 +25,8 @@ function ProductGrid({ selectedType, limit }) {
     <div className="productGrid">
       {displayedProducts.map((product) => (
         <ProductCard
-          key={product.id}
-          id={product.id}
+          key={product._id}
+          _id={product._id}
           name={product.name}
           price={product.price}
           type={product.type}

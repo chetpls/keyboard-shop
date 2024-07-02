@@ -12,12 +12,12 @@ const Cart = () => {
         <p>Your cart is empty</p>
       ) : (
         cart.map((product) => (
-          <div key={product.id} className="cartItem">
+          <div key={product._id} className="cartItem">
             <img src={product.image} alt={product.name} />
             <div>
               <p>{product.name}</p>
               <p>${product.price}</p>
-              <button onClick={() => removeFromCart(product.id)}>Remove</button>
+              <button onClick={() => removeFromCart(product._id)}>Remove</button>
             </div>
           </div>
         ))

@@ -2,11 +2,11 @@ import React, {useContext} from 'react';
 import "../../styles/Products.css"
 import {CartContext} from "../CartContext";
 
-const ProductCard = ({ id, name, price, type, image }) => {
+const ProductCard = ({ _id, name, price, type, image }) => {
   const {addToCart} = useContext(CartContext);
 
   const handleAddToCart = () => {
-    addToCart({id, name, price, type, image});
+    addToCart({_id, name, price, type, image});
   };
 
   return (

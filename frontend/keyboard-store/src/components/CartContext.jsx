@@ -11,7 +11,7 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = (productId) => {
     setCart((prevCart) => {
-      const index = prevCart.findIndex((product) => product.id === productId);
+      const index = prevCart.findIndex((product) => product._id === productId);
       if (index !== -1) {
         return [...prevCart.slice(0, index), ...prevCart.slice(index + 1)];
       }
