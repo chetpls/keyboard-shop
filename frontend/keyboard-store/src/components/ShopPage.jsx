@@ -27,6 +27,7 @@ function ShopPage() {
 
     return (
         <div className="shopPage">
+            <h1>{selectedType === '' ? 'All Products' : selectedType}</h1>
             <div className="content">
                 <SideBar onSelectType={handleSelectType} />
                 <ProductGrid selectedType={selectedType} />
