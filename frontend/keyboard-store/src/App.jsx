@@ -5,18 +5,25 @@ import ShopPage from "./components/ShopPage";
 import Navbar from "./components/Navbar";
 import { CartProvider } from "./components/CartContext";
 import CartPage from "./components/Shop/CartPage";
+import Footer from "./components/Footer";
 
 
 function App() {
   return (
     <CartProvider>
       <Router>
-        <Navbar />
+        <div>
+     <Navbar />
+        
+              <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
+    </div>
+          <Footer />
+        </div>
       </Router>
     </CartProvider>
   );

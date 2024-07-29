@@ -1,12 +1,4 @@
-.homePage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 50px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 .heroSection {
     display: flex;
@@ -30,29 +22,13 @@
     height: 100%;
 }
 
-.heroSection h1, .heroSection h3 {
-    color: #000;
-}
 
-#shopNow {
-    width: 150px;
-}
 
-p {
-    margin: 0;
-}
 
-.heroSection h1 {
-    text-transform: uppercase;
-    font-size: 64px;
-    box-sizing: border-box;
-    margin: 0;
-}
 
-.heroSection h3 {
-    text-transform: uppercase;
-    margin: 0;
-}
+
+
+
 
 /* .productImg {
     width: 250px;
@@ -114,15 +90,9 @@ p {
     box-sizing: border-box;
 } */
 
-.featuredSection {
-    padding: 10px 70px;
-    background-color: #242424;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-h2 {
+
+/* h2 {
     font-size: 36px;
 }
 
@@ -189,4 +159,4 @@ form input {
     flex-direction: column;
     gap: 5px;
     padding: 5px;
-}
+} */

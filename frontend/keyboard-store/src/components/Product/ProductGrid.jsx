@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 import productsData from "./products.json";
 import "../../styles/Products.css";
 
-function ProductGrid({ selectedType, limit }) {
+function ProductGrid({ selectedType, limit, size }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function ProductGrid({ selectedType, limit }) {
     : filteredProducts;
 
   return (
-    <div className="productGrid">
+    <div className="grid place-items-center grid-cols-1 md:grid-cols-2 2xl:grid-cols-4  ">
       {displayedProducts.map((product) => (
         <ProductCard
           key={product._id}
@@ -31,6 +31,7 @@ function ProductGrid({ selectedType, limit }) {
           price={product.price}
           type={product.type}
           image={product.image}
+          size={size}
         />
       ))}
     </div>
