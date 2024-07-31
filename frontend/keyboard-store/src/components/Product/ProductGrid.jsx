@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
-import productsData from "./products.json";
-import "../../styles/Products.css";
+
 
 function ProductGrid({ selectedType, limit, size }) {
   const [products, setProducts] = useState([]);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL + '/api/products' || 'http://localhost:5000/api/products';
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/products')
+    fetch(BACKEND_URL)
         .then(response => response.json())
         .then(data => setProducts(data))
         .catch(error => console.error('Error fetching data:', error));

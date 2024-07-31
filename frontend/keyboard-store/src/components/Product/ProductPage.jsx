@@ -6,12 +6,13 @@ function ProductPage() {
   const [product, setProduct] = useState(null);
   const { addToCart } = useContext(CartContext);
   const { id } = useParams();
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL + `/api/products/${id}` || `http://localhost:5000/api/products/${id}`;
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/products/${id}`
+          BACKEND_URL
         );
         const data = await response.json();
         setProduct(data);

@@ -1,4 +1,4 @@
-import { FaShippingFast, FaUndoAlt, FaHeadset, FaLock } from "react-icons/fa";
+import React from "react";
 
 import HeroSection from "./HeroSection";
 import FeaturedProducts from "./FeaturedProducts";
