@@ -1,4 +1,4 @@
-import "../../styles/HomePage.css"
+
 import { FaShippingFast, FaUndoAlt, FaHeadset, FaLock } from "react-icons/fa";
 
 function Benefits() {
