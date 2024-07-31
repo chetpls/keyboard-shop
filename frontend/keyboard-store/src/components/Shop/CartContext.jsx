@@ -22,6 +22,11 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const clearCart = () => {
+    setCart([]);
+    console.log('Cart cleared');
+  };
+
   const removeFromCart = (productId) => {
     setCart((prevCart) => {
       const existingProductIndex = prevCart.findIndex((item) => item._id === productId);
@@ -49,7 +54,7 @@ export const CartProvider = ({ children }) => {
   const grandTotal = useMemo(() => total + tax, [total, tax]);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, total, tax, grandTotal }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, total, tax, grandTotal }}>
       {children}
     </CartContext.Provider>
   );

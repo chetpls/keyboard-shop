@@ -1,12 +1,9 @@
 import { FaShippingFast, FaUndoAlt, FaHeadset, FaLock } from "react-icons/fa";
-import "../styles/HomePage.css";
-import HeroSection from "./Home/HeroSection";
-import FeaturedProducts from "./Home/FeaturedProducts";
-import Newsletter from "./Home/Newsletter";
-import Footer from "./Footer";
-import Benefits from "./Home/Benefits";
 
-
+import HeroSection from "./HeroSection";
+import FeaturedProducts from "./FeaturedProducts";
+import Newsletter from "./Newsletter";
+import Benefits from "./Benefits";
 
 function HomePage() {
   return (
@@ -15,7 +12,7 @@ function HomePage() {
       <FeaturedProducts></FeaturedProducts>
       <Benefits></Benefits>
       <div className="relative z-10">
-        <Newsletter></Newsletter>   
+        <Newsletter></Newsletter>
       </div>
     </div>
   );

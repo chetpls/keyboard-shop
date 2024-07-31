@@ -6,7 +6,7 @@ const Product = require('../models/Product');
 router.get('/', async (req, res) => {
     try {
         const products = await Product.find();
-        res.json(products);
+        res.status(200).json(products);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -29,5 +29,17 @@ router.post('/', async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 });
+
+//get product by id
+router.get('/:id', async (req, res) => {
+    const id = req.params.id;
+    try {
+        const product =await Product.findById(id);
+        if (!product) return res.status(404).json({ message: 'Product not found' });
+        res.status(200).json(product)
+    } catch (err) {
+        res.status(500).json({message: err.emssage});
+    }
+})
 
 module.exports = router;
